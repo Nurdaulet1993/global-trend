@@ -1,0 +1,33 @@
+@mixin mq($size) {
+    @if map-has-key($breakpoints, $size) {
+
+        $breakpoint: map-get($breakpoints, $size);
+
+        @media only screen and (max-width: $breakpoint) {
+            @content;
+        }
+
+    }@else if type-of($size) == number and not unitless($size) {
+
+        @media only screen and (max-width: $size) {
+            @content;
+        }
+
+    } @else {
+        @error 'The mq needs to be puted a number with units or jey from $breakpoints. You entered #{$size}'
+    }
+};
+
+@mixin flex($justify: space-between, $align: center, $direct: row, $wrap: nowrap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direct;
+    flex-wrap: $wrap;
+}
+
+@mixin button() {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem 1.6rem;
+}

@@ -1,0 +1,53 @@
+.advantages{
+    background: linear-gradient(rgba(0,0,0,.7)), url('../../../assets/img/advantages-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__content {
+        @include flex($wrap: wrap);
+        padding-top: (80 / 16) * 1rem;
+    }
+
+    &__item {
+        width: (360 / 16) * 1rem;
+        background-color: gray(1);
+        border-radius: (6 / 16) * 1rem;
+        padding: 4.5rem 1rem 1rem;
+        margin-bottom: 6.5rem;
+        position: relative;
+        text-align: center;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+
+    &__heading {
+        color: $accent;
+        font-family: $ff-serif;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.6;
+        margin-bottom: 0.9375rem;
+    }
+
+    &__text {
+        color: gray(4);
+        font-size: (15 / 16) * 1rem;
+        font-weight: 300;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+    &__icon {
+        background-color: $primary;
+        display: inline-block;
+        padding: (20 / 16) * 1rem;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: -5rem;
+        transform: translateX(-50%);
+        box-shadow: 0 16px 38px -12px rgba(0,0,0,.56), 0 4px 25px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+
+    }
+    &__icon  img{
+        width: (100 / 16) * 1rem;
+    }
+}

@@ -1,0 +1,35 @@
+.header {
+    width:  100%;
+    // box-shadow: 0 4px 18px 0 rgba(0,0,0,.12), 0 7px 10px -5px rgba(0,0,0,.15);
+    background-color: rgba($color: #fff, $alpha: 0.7);
+    position: absolute;
+    z-index: 100;
+
+    .container {
+        @include flex;
+        height: (80 / 16) * 1rem;
+    }
+
+    .nav {
+        @include flex;
+
+        &__link {
+            text-decoration: none;
+            color: gray(5);
+            font-size: (16 / 16) * 1rem;
+            transition: all 0.2s ease-in;
+
+            &:hover {
+                color: $accent;
+            }
+
+            &.active {
+                color: $accent;
+            }
+        }
+
+        &__item:not(:last-of-type){
+            margin-right: 20px;
+        }
+    }
+}

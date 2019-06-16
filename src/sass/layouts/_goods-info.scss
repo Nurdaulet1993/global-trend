@@ -1,0 +1,38 @@
+.goods-info {
+    width: 100%;
+    // background-color: #EDF1F2;
+}
+
+.good {
+    @include flex;
+    margin-bottom: (60 / 16) * 1rem;
+
+    &__image {
+        display: block;
+        width: 350px;
+        height: auto;
+        overflow: hidden;
+        border-radius: (8 / 16) * 1rem;
+        box-shadow: 0px 21px 30px -12px rgba(0,0,0,0.75);
+    
+    }
+
+    &__desc {
+        padding: 2rem;
+    }
+
+    &__heading {
+        font-size: (24 / 16) * 1rem;
+        font-weight: 700;
+        line-height: 1.4em;
+        color: gray(5);
+        margin-bottom: (15 / 16) * 1rem;
+    }
+
+    &__text {
+        font-size: (16 / 16) * 1rem;
+        line-height: 1.7; 
+        color: gray(4);
+        margin-bottom: (15 / 16) * 1rem;
+    }
+}

@@ -1,0 +1,12 @@
+.form-group {
+    &__input {
+        padding: (10 / 16) * 1rem;
+        outline: none;
+        border: {
+            top: none;
+            left: none;
+            right: none;
+        }
+        position: relative;
+    }
+}
