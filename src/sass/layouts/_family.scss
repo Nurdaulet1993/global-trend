@@ -1,15 +1,24 @@
 .family {
     width: 100%;
-    height: 800px;
-    background: linear-gradient(rgba(#000, 0.5)), url('../../../assets/img/family_bg.png');
+    padding-bottom: (40 / 16) * 1rem;
+    background: linear-gradient(rgba(#000, 0.7)), url('../../../assets/img/family_bg.png');
     background-size: cover;
 
     &__list {
         color: gray(1);
         font-size: (16 / 16) * 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
         li {
-            padding: (15 / 16) * 1rem 0 (15 / 16) * 1rem (50 / 16) * 1rem;
+            display: inline-block;
+            padding: 0 15px (15 / 16) * 1rem (50 / 16) * 1rem;
             position: relative;
+            width: 33%;
+            margin-bottom: (40 / 16) * 1rem;
+            font-size: (20 / 16) * 1rem;
 
             &:before {
                 content: url('../../../assets/img/icons9.svg');
@@ -19,7 +28,7 @@
                 border-radius: 50%;
                 position: absolute;
                 left: 0;
-                top: (6 / 16) * 1rem;
+                top: 0;
                 display: block;
                 padding-left: (2 / 16) * 1rem;
                 padding-top:(5 / 16) * 1rem;
