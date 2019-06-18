@@ -1,0 +1,31 @@
+.footer {
+    width: 100%;
+    padding: (60 / 16) * 1rem 0;
+    background-color: gray(6);
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &-info__item {
+        display: block;
+        text-decoration: none;
+        color: gray(1);
+        font-size: (16 / 16) * 1rem;
+        margin-bottom: (20 / 16) * 1rem;
+        & .fas {
+            margin-right: (8 / 16) * 1rem;
+            font-size: (24 / 16) * 1rem;
+        }
+    }
+
+    &__author {
+        a {
+            font-size: (16 / 16) * 1rem;
+            text-decoration: none;
+            color: gray(1);
+        }
+        
+    }
+}

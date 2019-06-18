@@ -13,6 +13,7 @@
         position: relative;
         padding: 0 (60 / 16) * 1rem;
         text-transform: uppercase;
+        line-height: 1.2;
 
         &:before, &::after {
             content: '';
@@ -32,6 +33,11 @@
         &:after {
             right: 0!important;         
         }
+    }
+
+    @include mq(418px) {
+        font-size: (20 / 16) * 1rem;
+        text-align: center;
     }
     
 }

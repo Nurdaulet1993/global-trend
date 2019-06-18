@@ -11,11 +11,17 @@
         position: absolute;
         left: 0;
         bottom: 0;
+        @include mq(1107px) {
+            display: none;
+        }
     }
 
     &__desc {
         max-width: (600 / 16) * 1rem;
         margin-left: auto;
+        @include mq(1107px) {
+            margin: 0 auto;
+        }
     }
 
     &__heading {

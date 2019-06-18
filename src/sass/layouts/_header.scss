@@ -1,13 +1,30 @@
 .header {
-    width:  100%;
-    // box-shadow: 0 4px 18px 0 rgba(0,0,0,.12), 0 7px 10px -5px rgba(0,0,0,.15);
+    width: 100%;
     background-color: rgba($color: #fff, $alpha: 0.7);
-    position: absolute;
+    position: fixed;
     z-index: 100;
+    top: -1px;
+    @include mq(1240px) {
+        background-color: rgba($color: #fff, $alpha: 0.9);
+    }
+
+    &.scroll {
+        background-color: gray(1);
+        box-shadow: 0 4px 18px 0 rgba(0,0,0,.12), 0 7px 10px -5px rgba(0,0,0,.15);
+    }
 
     .container {
-        @include flex;
+        transition: 0.4s ease-in-out;
+    }
+
+    .container.show {
+        transform: translate3d(-250px,0,0);
+    }
+
+    &__navbar {
         height: (80 / 16) * 1rem;
+        @include flex;
+        position: relative;
     }
 
     .nav {
@@ -31,5 +48,67 @@
         &__item:not(:last-of-type){
             margin-right: 20px;
         }
+
+        @include mq(900px) {
+            display: block;
+            text-align: center;
+
+            li {
+                margin: 0;
+                padding: 1rem;
+                border-bottom: 1px solid #e5e5e5;
+                .social-group {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    .social{
+        &:not(:last-of-type) {
+            margin-right: (10 / 16) * 1rem;
+        }
+        
+        @include mq(900px) {
+            margin: 0 (5 / 16) * 1rem;
+        }
+    }
+
+    &__toggler {
+        width: (35 / 16) * 1rem;
+        height: (30 / 16) * 1rem;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+        @include mq(900px) {
+            display: flex;
+        }
+
+        span {
+            width: 90%;
+            height: (5 / 16) * 1rem;
+            background-color: gray(4);
+        }
+    }
+
+
+    &__collapse {
+        width: (250 / 16) * 1rem;
+        height: 100vh;
+        padding-left: (15 / 16) * 1rem;
+        background-color: gray(1);
+        transform: translate3d(250px,0,0);
+        position: fixed;
+        top: 0;
+        right: 0;
+        transition: all 0.4s linear;
+        border-left: 1px solid #e5e5e5;
+    }
+
+    &__collapse.show {
+        transform: translate3d(0, 0, 0);
     }
 }

@@ -1,0 +1,28 @@
+%social {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    font-size: (20 / 16) * 1rem; 
+}
+
+.social-facebook {
+    @extend %social;
+    background-color: #3b5998;
+}
+.social-insta {
+    @extend %social;
+    background: linear-gradient(to right, #FBB209, #9303E7);
+}
+
+.social-vk {
+    @extend %social;
+    background-color: #4A76A8;
+}
+
+.social-group {
+    display: flex;
+}

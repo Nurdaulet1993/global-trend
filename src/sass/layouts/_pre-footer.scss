@@ -1,0 +1,27 @@
+.pre-footer {
+    width: 100%;
+    padding: (20 / 16) * 1rem;
+    background: $primary;
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__social {
+        width: (160 / 16) * 1rem;
+        height: (90 / 16) * 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: gray(1);
+        font-size: (24 / 16) * 1rem;
+        text-decoration: none;
+    }
+
+    &__social:not(:last-of-type) {
+        border: {
+            right: 1px solid gray(4);
+        }
+    }
+}
