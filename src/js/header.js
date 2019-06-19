@@ -53,7 +53,7 @@ let $page = $('html, body');
 
 $('a[href*="#"]').click(function() {
     $page.animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
+        scrollTop: $($.attr(this, 'href')).offset().top - 78
     }, 400);
     $('.header .container').removeClass('show');
     return false;
