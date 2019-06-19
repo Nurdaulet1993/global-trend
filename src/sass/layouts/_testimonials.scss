@@ -30,6 +30,16 @@
     width: (800 / 16) * 1rem;
     margin: 0 auto;
 
+    @include mq(992px) {
+        width: (580 / 16) * 1rem;
+    }
+    @include mq(720px) {
+        width: (500 / 16) * 1rem;
+    }
+    @include mq(593px) {
+        width: 100%;
+    }
+
     &__icon {
         display: inline-block;
         width: (150 / 16) * 1rem;
@@ -51,6 +61,9 @@
         font-weight: 300;
         line-height: 1.8;
         padding: (20 / 16) * 1rem 0;
+        @include mq(720px) {
+            font-size: (14 / 16) * 1rem;
+        }
     }
 
     &__author {
@@ -58,6 +71,9 @@
         font-size: (22 / 16) * 1rem;
         font-weight: 700;
         line-height: 1.6;
+        @include mq(720px) {
+            font-size: (16 / 16) * 1rem;
+        }
     }
 
     &__location {
@@ -66,6 +82,9 @@
         font-weight: 400;
         line-height: 1.6;
         margin-bottom: (10 / 16) * 1rem;
+        @include mq(720px) {
+            font-size: (14 / 16) * 1rem;
+        }
     }
 
     &__raiting {

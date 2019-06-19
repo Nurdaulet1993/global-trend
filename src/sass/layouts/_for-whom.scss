@@ -12,12 +12,21 @@
         display: flex;
         flex-wrap: wrap;
         margin-bottom: (30 / 16) * 1rem;
+
+        @include mq(320px) {
+            width: 100%;
+            padding: (30 / 16) * 1rem  0;
+            box-shadow: none;
+        }
     }
 
     &__img{
         flex-grow: 0;
         flex-shrink: 0;
-        width: 400px;
+        width: 36%;
+        @include mq(900px) {
+            width: 100%;
+        }
 
         img {
             display: block;
@@ -30,6 +39,10 @@
     &__desc {
         padding: 0 (25 / 16) * 1rem;
         width: 64%;
+        @include mq(900px) {
+            width: 100%;
+            padding: 1rem 0 0;
+        }
     }
 
     &__heading {

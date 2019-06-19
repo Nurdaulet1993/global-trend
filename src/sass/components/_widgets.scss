@@ -1,0 +1,118 @@
+.widgets {
+    position: fixed;
+    bottom: 80px;
+    right: 50px;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+
+.widget {
+    width: 0;
+    height: 80px;
+    margin-left: auto;
+    margin-bottom: (15 / 16) * 1rem;
+    background-color: $primary;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    @include mq(470px) {
+        height: 50px;
+    }
+
+    &__label {
+        color: gray(1);
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 80px;
+        background-color: $primary;
+        border-radius: 50%;
+        position: absolute;
+        left: -40px;
+        top: 0;
+        @include mq(470px) {
+            height: 50px;
+            width: 50px;
+            left: -25px;
+        }
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 80px;
+        background-color: $primary;
+        border-radius: 50%;
+        position: absolute;
+        right: -40px;
+        top: 0;
+        @include mq(470px) {
+            height: 50px;
+            width: 50px;
+            right: -25px;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: gray(1);
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        border-radius: 50%;
+        right: -40px;
+        top: 0;
+        z-index: 20;
+        background: $primary;
+        font-size: (55 / 16) * 1rem;
+        @include mq(470px) {
+            height: 50px;
+            width: 50px;
+            right: -25px;
+            font-size: (28 / 16) * 1rem;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        z-index: 10;
+        color: gray(1);
+        overflow: hidden;
+        text-decoration: none;
+        font-size: (20 / 16) * 1rem;
+        @include mq(470px) {
+            height: 50px;
+        }
+    }
+    &.phone:not(a):hover, &.phone:not(a):active {
+        width: 220px;
+        padding: 0 40px;
+    }
+
+    &.whatsapp:not(a):hover, &.whatsapp:not(a):active {
+        width: 160px;
+        padding: 0 40px;
+    }
+
+    &:hover &__label{
+        width: 100%;
+    }
+    
+}
+

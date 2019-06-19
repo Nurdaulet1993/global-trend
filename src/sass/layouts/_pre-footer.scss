@@ -17,11 +17,23 @@
         color: gray(1);
         font-size: (24 / 16) * 1rem;
         text-decoration: none;
+        @include mq(420px) {
+            width: (120 / 16) * 1rem;
+            height: (60 / 16) * 1rem;
+            border-radius: (8 / 16) * 1rem;
+            margin: 0 (5 / 16) * 1rem;
+        }
     }
 
     &__social:not(:last-of-type) {
         border: {
             right: 1px solid gray(4);
+        }
+
+        @include mq(420px) {
+            border: {
+                right: 0;
+            }
         }
     }
 }

@@ -7,9 +7,14 @@ document.querySelectorAll('.header__nav .nav__link').forEach(element => {
     }   
 });
 
+const   block = document.createElement('a');
+        block.className = "scroll-top";
+        block.href = "#hero";
+        block.innerHTML = "<i class='fas fa-arrow-up'></i>";
+        document.querySelector('body').appendChild(block);
 
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {scrollFunction(); scroll();};
 
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {

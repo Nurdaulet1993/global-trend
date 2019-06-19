@@ -1,11 +1,29 @@
 .footer {
     width: 100%;
     padding: (60 / 16) * 1rem 0;
-    background-color: gray(6);
+    background: radial-gradient(ellipse at center,#585858 0,#232323 100%);
+    background-size: 550% 450%;
 
     .container {
         display: flex;
         justify-content: space-around;
+        
+
+        @include mq(773px) {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    }
+
+    &__logo {
+        margin-right: (15 / 16) * 1rem;
+    }
+
+    &-info {
+        padding: 0 (10 / 16) * 1rem;
+        @include mq(773px) {
+            margin: (20 / 16) * 1rem 0;
+        }
     }
 
     &-info__item {
@@ -13,7 +31,10 @@
         text-decoration: none;
         color: gray(1);
         font-size: (16 / 16) * 1rem;
+        line-height: 1.6;
         margin-bottom: (20 / 16) * 1rem;
+        
+
         & .fas {
             margin-right: (8 / 16) * 1rem;
             font-size: (24 / 16) * 1rem;
@@ -21,6 +42,8 @@
     }
 
     &__author {
+        padding: 0 (10 / 16) * 1rem;
+        line-height: 1.6;
         a {
             font-size: (16 / 16) * 1rem;
             text-decoration: none;

@@ -1,0 +1,20 @@
+.scroll-top {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(#000, 0.7);
+    position: fixed;
+    right: 28px;
+    bottom: 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: gray(1);
+    border-radius: (8 / 16) * 1rem;
+    cursor: pointer;
+    z-index: 10;
+    text-decoration: none;
+
+    &.show {
+        display: flex;
+    }
+}

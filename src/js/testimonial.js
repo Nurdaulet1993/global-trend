@@ -7,8 +7,13 @@ $(document).ready(function(){
         responsive:{
             0:{
                 items:1,
+                nav:false
+            },
+            593:{
+                items:1,
                 nav:true
-            }
+            },
+
         }
     });
 });
