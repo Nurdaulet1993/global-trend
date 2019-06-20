@@ -16,8 +16,9 @@
     margin-left: auto;
     margin-bottom: (15 / 16) * 1rem;
     background-color: $primary;
-    transition: 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     position: relative;
+    
     @include mq(470px) {
         height: 50px;
     }
@@ -73,7 +74,7 @@
         top: 0;
         z-index: 20;
         background: $primary;
-        font-size: (55 / 16) * 1rem;
+        font-size: (45 / 16) * 1rem;
         @include mq(470px) {
             height: 50px;
             width: 50px;
@@ -113,6 +114,8 @@
     &:hover &__label{
         width: 100%;
     }
+
+    
     
 }
 

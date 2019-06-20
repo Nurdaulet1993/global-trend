@@ -32,7 +32,8 @@
     }
 
     &__input {
-        border: none;
+        border: none!important;
+        outline: none!important;
     }
 
     button {

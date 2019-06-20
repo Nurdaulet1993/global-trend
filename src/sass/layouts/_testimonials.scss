@@ -29,6 +29,7 @@
     text-align: center;
     width: (800 / 16) * 1rem;
     margin: 0 auto;
+    padding-top: (10 / 16) * 1rem;
 
     @include mq(992px) {
         width: (580 / 16) * 1rem;
