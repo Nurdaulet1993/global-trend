@@ -64,13 +64,13 @@
                 </div>
             </div>
         </div>
-        <div class="hero__images">
+        <!-- <div class="hero__images">
             <img src="./assets/img/gr/gr.png" alt="gr" class="hero__gr-0 animate">
             <img src="./assets/img/gr/5bd8c4196e18148d3d407987_2.png" alt="gr" class="hero__gr-1 animate">
             <img src="./assets/img/gr/5bd8ca2351cc3da8ffee84bd_2_1.png" alt="gr" class="hero__gr-2 animate">
             <img src="./assets/img/gr/5bd8ca71ea13a9fbf9931b7b_4.png" alt="gr" class="hero__gr-3 animate">
             <img src="./assets/img/gr/5bd8cab951cc3dc9afee8542_1.png" alt="gr" class="hero__gr-4 animate">
-        </div>
+        </div> -->
     </section>
 
     <section id="goods-info" class="goods-info">
@@ -485,37 +485,39 @@
     </section>
     
     <section class="call-to-action">
-        <div class="container">
-            <div class="call-to-action__content">
-                <h4 class="call-to-action__heading">
-                    Получите консультацию специалиста, ответим на все интересующие вопросы
-                </h4>
 
-                <form autocomplete="off">
-                    <div class="form-group">
-                        <i class="fas fa-user-alt"></i>
-                        <div class="form-group__wrap">
-                            <input type="text" name="name" placeholder="Имя" class="form-group__input"> 
+            <div class="container">
+                <div class="call-to-action__content">
+                    <h4 class="call-to-action__heading">
+                        Получите консультацию специалиста, ответим на все интересующие вопросы
+                    </h4>
+    
+                    <form autocomplete="off">
+                        <div class="form-group">
+                            <i class="fas fa-user-alt"></i>
+                            <div class="form-group__wrap">
+                                <input type="text" name="name" placeholder="Имя" class="form-group__input"> 
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <i class="fas fa-envelope form-group__icon"></i>
-                        <div class="form-group__wrap">
-                            <input type="text" name="email" placeholder="Email" class="form-group__input"> 
+                        <div class="form-group">
+                            <i class="fas fa-envelope form-group__icon"></i>
+                            <div class="form-group__wrap">
+                                <input type="text" name="email" placeholder="Email" class="form-group__input"> 
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <i class="fas fa-phone"></i>
-                        <div class="form-group__wrap">
-                            <input type="text" name="phone" placeholder="Телефон" class="form-group__input"> 
+                        <div class="form-group">
+                            <i class="fas fa-phone"></i>
+                            <div class="form-group__wrap">
+                                <input type="text" name="phone" placeholder="Телефон" class="form-group__input"> 
+                            </div>
                         </div>
-                    </div>
-                    
-                    <button class="btn-call">Получить консультацию</button>
-                    
-                </form>
+                        
+                        <button class="btn-call">Получить консультацию</button>
+                        
+                    </form>
+                </div>
             </div>
-        </div>
+   
     </section>
 
     <section id="testimonial" class="testimonials">
@@ -713,17 +715,33 @@
         </div>
     </div>
 
+    <!-- <div class="covervid-wrapper" style="width: 100%; height: 800px">
+        <video class="covervid-video" autoplay loop poster="img/video-fallback.png">
+            <source src="./assets/video/Particle-24241.mp4" type="video/webm">
+            <source src="./assets/video/Particle-24241.mp4" type="video/mp4">
+        </video>
+    </div> -->
+
+    <style>
+        /* .covervid-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        } */
+    </style>
 
     <script src="./assets/vendor/jquery.min.js"></script>
     <script src="./assets/vendor/owl-carusel/owl.carousel.min.js"></script>
     <script src="./assets/vendor/arctic-modal/jquery.arcticmodal-0.3.min.js"></script>
+    <script src="./assets/vendor/covervid.js"></script>
     <script src="./assets/js/all.js"></script>
     <script>
         $('.modal').click(function() {
             $('#exampleModal').arcticmodal();
         })
             
-        
     </script>
 </body>
 </html>

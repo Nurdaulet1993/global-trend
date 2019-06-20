@@ -4,20 +4,29 @@
     position: relative;
 
     &__wrap {
-        background-image: url('../../../assets/img/hero_bg-min.png');
-        background-size: cover;
+        background-image: url('../../../assets/img/girl.png');
+        background-size: contain;
         background-repeat: no-repeat;
+        background-position: 100% 100%;
         position: relative;
         z-index: 10;
-
-        @include mq(1240px) {
-            background: linear-gradient(rgba(#000, 0.4)), url('../../../assets/img/hero_bg.png');
-            background-position: 50% 100%;
+        // @include mq(800px) {
+        //     background-position: 50% 60%;
+        // }
+        @include mq(800px) {
+            background: linear-gradient(rgba(#000, 0.4)), url('../../../assets/img/girl.png');
+            background-position: 100% bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
 
             h1 {
                 color: gray(1);
                 @include mq(490px){
                     font-size: (60 / 16) * 1rem;
+                }
+
+                @include mqh(520px) {
+                    font-size: (45 / 16) * 1rem;
                 }
             }
 
