@@ -7,6 +7,10 @@
     justify-content: flex-end;
     flex-direction: column;
     cursor: pointer;
+
+    @include mq(1140px) {
+        display: none;
+    }
 }
 
 
@@ -115,7 +119,9 @@
         width: 100%;
     }
 
-    
-    
+}
+
+.widget-group{
+    padding-right: (15 / 16) * 1rem;
 }
 

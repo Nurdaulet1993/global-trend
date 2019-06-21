@@ -1,14 +1,16 @@
 .hero {
     width: 100%;
+    overflow: hidden;
     background-color: #EDF1F2;
-    position: relative;
+ 
 
     &__wrap {
+        width: 100%;
         background-image: url('../../../assets/img/girl.png');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: 100% 100%;
-        position: relative;
+
         z-index: 10;
         // @include mq(800px) {
         //     background-position: 50% 60%;

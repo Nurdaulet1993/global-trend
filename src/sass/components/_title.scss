@@ -5,6 +5,11 @@
     padding: (80 / 16) * 1rem 0;
     display: flex;
     justify-content: center;
+    @include mq(500px) {
+        font-size: (26 / 16) * 1rem;
+        padding: (50 / 16) * 1rem 0;
+        text-align: center;
+    }
 
     &-light {
         color: gray(1);

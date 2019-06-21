@@ -7,3 +7,4 @@ let windowWidth = $(window).width();
 //     $('.hero .animate').css('margin-left', moveX + 'px');
 //     $('.hero .animate').css('margin-bottom', moveY + 'px');
 // })
+

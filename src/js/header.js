@@ -26,7 +26,7 @@ function scrollFunction() {
 }
 
   
-let x = window.matchMedia("(max-width: 900px)");
+let x = window.matchMedia("(max-width: 1140px)");
 mq(x);
 x.addListener(mq);
 
@@ -37,6 +37,22 @@ function mq(x) {
         block.className="header__collapse";
         block.appendChild(document.querySelector('nav'));
         document.querySelector('.header .container').appendChild(block);
+        let widgets = document.createElement('div');
+        widgets.innerHTML = `
+            <div class="widget-group">
+                <a href="tel:+77784097967" class = "btn-widget">
+                    <i class="fas fa-phone-volume"></i>
+                    +7 778 409 79 67
+                </a>
+
+                <a href="https://wa.me/77784097967" class = "btn-widget">
+                    <i class="fab fa-whatsapp"></i>
+                    Напиши мне
+                </a>
+            </div>
+        `;
+
+        block.appendChild(widgets);
 
         document.querySelector('.header__toggler').onclick = function() {
         document.querySelector('.header .container').classList.toggle('show');

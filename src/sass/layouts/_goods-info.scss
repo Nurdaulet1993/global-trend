@@ -1,5 +1,18 @@
 .goods-info {
     width: 100%;
+    position: relative;
+
+    .tube-left {
+        position: absolute;
+        top: (100 / 16) * 1rem;
+        left: 0;
+    }
+
+    .tube-right {
+        position: absolute;
+        top: 40%;
+        right: 0;
+    }
     // background-color: #EDF1F2;
 }
 
