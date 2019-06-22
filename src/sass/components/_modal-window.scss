@@ -6,7 +6,7 @@
     height: 100vh;
     background: rgba(#000, 0.7);
     z-index: 1000;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
 
@@ -21,42 +21,16 @@
         width: 540px;
         background-color: gray(1);
         border-radius: (6 / 16) * 1rem;
-        padding: (60 / 16) * 1rem (30 / 16) * 1rem (30 / 16) * 1rem;
+        padding: (70 / 16) * 1rem (40 / 16) * 1rem (40 / 16) * 1rem;
         position: relative;
     }
-
-
-    .form-group { 
-        width: 100%;
-        position: relative;
-        padding-left: (30 / 16) * 1rem;
-
-        i {
-            position: absolute;
-            left: 0;
-            top: (10 / 16) * 1rem;
-           
-        }
-
-        &__wrap {
-            width: 100%;
-
-            input {
-                width: 99%;
-            }
-        }
-    }
-
-    textarea {
-        width: 100%;
-    }
-
 
     &__heading {
         width: 90%;
-        font-size: (16 / 16) * 1rem;
+        font-size: (20 / 16) * 1rem;
         line-height: 1.4;
-        background: linear-gradient(60deg,#ab47bc,#7b1fa2);
+        // background: linear-gradient(60deg,#ab47bc,#7b1fa2);
+        background: linear-gradient(60deg, lighten( $primary, 20% ), $primary);
         color: gray(1);
         padding: (10 / 16) * 1rem;
         border-radius: (6 / 16) * 1rem;
@@ -66,4 +40,71 @@
         transform: translateX(-50%);
         text-align: center;
     }
+
+    .btn-call{
+        border: none;
+        
+    }
+
+    .modal-group {
+        margin-bottom: (30 / 16) * 1rem;
+    }
+}
+
+.modal-group {
+    width: 100%;
+    padding-left: (30 / 16) * 1rem;
+    position: relative;
+
+    i {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__wrap {
+        width: 100%;
+        display: inline-block;
+        position: relative;
+
+        input {
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: (10 / 16) * 1rem;
+            outline: 1px solid transparent;
+            color: gray(2);
+            font-size: (16 / 16) * 1rem;
+
+            border: {
+                top: none;
+                left: none;
+                right: none;
+            }
+
+            &::placeholder {
+                color: gray(2);
+            }
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: $primary;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transition: 0.4s;
+            z-index: 500;
+        }
+
+        &.active:after {
+            width: 100%;
+            left: 0;
+        }
+    }
+
 }
