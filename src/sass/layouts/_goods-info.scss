@@ -12,6 +12,9 @@
         position: absolute;
         top: 40%;
         right: 0;
+        // @include mq(340px) {
+        //     top: 38%;
+        // }
     }
     // background-color: #EDF1F2;
 }

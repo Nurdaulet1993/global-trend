@@ -13,3 +13,15 @@ document.querySelectorAll('.modal-group__input').forEach(item => {
         this.value.style.color="red";
     }
 })
+
+document.querySelectorAll('.modal').forEach(item => {
+    item.onclick = function() {
+        document.querySelector(this.getAttribute('href')).classList.add('show');
+
+        document.querySelector('.modal-window').onclick = function(e) {
+            if (e.target == document.querySelector('.modal-window')) {
+                document.querySelector('.modal-window').classList.remove('show');
+            }
+        }
+    }
+})
