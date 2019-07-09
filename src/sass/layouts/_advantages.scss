@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
 
     &__content {
-        @include flex($wrap: wrap);
+        @include flex($wrap: wrap, $align: stretch);
         padding-top: (80 / 16) * 1rem;
         @include mq(1110px) {
             justify-content: space-around;
