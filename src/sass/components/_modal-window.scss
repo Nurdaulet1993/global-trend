@@ -162,3 +162,24 @@
     max-height: 600px;
     overflow-y: scroll;
 }
+
+.modal-list{
+    li {
+        display: block;
+        margin: (15 / 16) * 1rem 0;
+        padding-left: (20 / 16) * 1rem;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: $primary;
+            position: absolute;
+            left: 0;
+            top: 5px;
+        }
+    }
+}
