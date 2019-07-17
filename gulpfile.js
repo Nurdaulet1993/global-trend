@@ -27,7 +27,7 @@ function styles() {
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('all.css'))
     .pipe(autoprefixer())
-    // .pipe(cleanCSS({compatibility: 'ie8', level: 2}))
+    .pipe(cleanCSS({compatibility: 'ie8', level: 2}))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./assets/css'))
     .pipe(browserSync.stream());

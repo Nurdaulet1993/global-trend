@@ -11,7 +11,7 @@ document.querySelectorAll('.call-to-action form').forEach(item => {
             warning.innerText = "Вы не заполнили все поля!";
             this.appendChild(warning);
             setTimeout(function() {
-                document.querySelector('.warning').style.display="none";
+                document.querySelector('.warning').remove();
             }, 2000);
         }else {
             this.setAttribute('action', './mail.php');
