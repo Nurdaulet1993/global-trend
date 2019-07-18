@@ -65,4 +65,8 @@
         color: gray(4);
         margin-bottom: (15 / 16) * 1rem;
     }
+
+    .btn-call:not(:last-child) {
+        margin-right: (15 / 16) * 1rem;
+    }
 }

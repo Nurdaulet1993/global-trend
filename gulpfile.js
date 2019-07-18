@@ -39,7 +39,7 @@ function scripts() {
     .pipe(babel({
         presets: ['@babel/env']
     }))
-    .pipe(uglify({toplevel: true}))
+    // .pipe(uglify({toplevel: true}))
     .pipe(gulp.dest('./assets/js'))
     .pipe(browserSync.stream());
 }

@@ -55,8 +55,8 @@ function mq(x) {
         block.appendChild(widgets);
 
         document.querySelector('.header__toggler').onclick = function() {
-        document.querySelector('.header .container').classList.toggle('show');
-      }
+            document.querySelector('.header .container').classList.toggle('show');
+        }
 
     } else {
         document.querySelector('.header__navbar').appendChild(document.querySelector('nav'));
