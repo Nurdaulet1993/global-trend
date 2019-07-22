@@ -153,6 +153,29 @@ document.querySelectorAll('.modal').forEach(function (item) {
       }
     };
   };
+});
+document.querySelectorAll('.modal-window form').forEach(function (item) {
+  item.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = this.querySelector('input[name="name"]').value;
+    var email = this.querySelector('input[name="email"]').value;
+    var phone = this.querySelector('input[name="phone"]').value;
+    var text = this.querySelector('textarea[name="desc"]').value;
+
+    if (name.length == 0 || email.length == 0 || phone.length == 0 || text.length == 0) {
+      var warning = document.createElement('div');
+      warning.className = "warning";
+      warning.innerText = "Вы не заполнили все поля!";
+      this.appendChild(warning);
+      setTimeout(function () {
+        document.querySelector('.warning').remove();
+      }, 2000);
+    } else {
+      this.setAttribute('action', './mail.php');
+      this.setAttribute('method', 'POST');
+      this.submit();
+    }
+  });
 }); // window.onscroll = function() {scroll()};
 
 function scroll() {

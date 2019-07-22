@@ -7,6 +7,7 @@ $mail->CharSet = 'utf-8';
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
+$desc = $_POST['desc'];
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
@@ -29,7 +30,7 @@ $mail->addAddress('nurik93sat@gmail.com');     // Кому будет уходи
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Заявка с тестового сайта';
-$mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone. '<br>Почта этого пользователя: ' .$email;
+$mail->Body    = '' .$name . ' оставил заявку, его телефон ' .$phone. '<br>Почта этого пользователя: ' .$email. '<br>Сообщение:' .$desc;
 $mail->AltBody = '';
 
 if(!$mail->send()) {
