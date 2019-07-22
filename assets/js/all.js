@@ -7,7 +7,7 @@ document.querySelectorAll('.call-to-action form').forEach(function (item) {
     var email = this.querySelector('input[name="email"]').value;
     var phone = this.querySelector('input[name="phone"]').value;
 
-    if (name.length == 0 || email.length || phone.length) {
+    if (name.length == 0 || email.length == 0 || phone.length == 0) {
       var warning = document.createElement('div');
       warning.className = "warning";
       warning.innerText = "Вы не заполнили все поля!";
